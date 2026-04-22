@@ -1,0 +1,151 @@
+/* ===== VARIABLES GLOBALES ===== */
+:root {
+  /* Colores principales */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-light: #dbeafe;
+  --color-secondary: #10b981;
+  --color-secondary-hover: #059669;
+  --color-accent: #f59e0b;
+
+  /* Colores de texto */
+  --color-text: #1e293b;
+  --color-text-light: #64748b;
+  --color-text-white: #ffffff;
+
+  /* Colores de fondo */
+  --color-bg: #f8fafc;
+  --color-bg-white: #ffffff;
+  --color-bg-dark: #1e293b;
+
+  /* Colores de estado */
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
+  --color-info: #3b82f6;
+
+  /* Bordes */
+  --color-border: #e2e8f0;
+  --border-radius: 8px;
+  --border-radius-lg: 12px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+
+  /* Tipografía */
+  --font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 2rem;
+
+  /* Navbar */
+  --navbar-height: 60px;
+}
+
+/* ===== RESET BÁSICO ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ===== TIPOGRAFÍA GLOBAL ===== */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-text);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===== UTILIDADES ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.page {
+  padding-top: calc(var(--navbar-height) + var(--spacing-lg));
+  padding-bottom: var(--spacing-2xl);
+  min-height: 100vh;
+}
+
+.page-title {
+  margin-bottom: var(--spacing-lg);
+}
+
+/* ===== MENSAJES ===== */
+.message {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+}
+
+.message--success {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.message--error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.message--info {
+  background-color: var(--color-primary-light);
+  color: #1e40af;
+  border: 1px solid #bfdbfe;
+}

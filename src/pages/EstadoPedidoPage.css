@@ -1,0 +1,96 @@
+.order-status-card {
+  background: var(--color-white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  padding: 3rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.order-status-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-status-header h1 {
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
+}
+
+.order-number {
+  font-size: 1.2rem;
+  color: var(--color-text-light);
+  margin-bottom: 1.5rem;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.status-confirmado {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.order-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.order-info-box {
+  background: var(--color-background);
+  padding: 1.5rem;
+  border-radius: var(--radius-sm);
+}
+
+.order-info-box h3 {
+  margin-top: 0;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.order-items-list h3 {
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2.5rem;
+}
+
+.order-table th,
+.order-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.order-table th {
+  background: var(--color-background);
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.order-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 640px) {
+  .order-info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

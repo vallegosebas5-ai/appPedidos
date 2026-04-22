@@ -1,0 +1,408 @@
+.coins-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ── Hero saldo ── */
+.coins-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 20px;
+  padding: 28px 32px;
+}
+
+.coins-hero__icon {
+  font-size: 2.8rem;
+}
+
+.coins-hero__title {
+  font-size: 1.6rem;
+  margin: 0;
+  color: #fff;
+}
+
+.coins-hero__sub {
+  margin: 2px 0 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.coins-hero__balance {
+  margin-left: auto;
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+/* ── Barra de info ── */
+.coins-info-bar {
+  background: rgba(150, 0, 24, 0.06);
+  border: 1px solid rgba(150, 0, 24, 0.15);
+  border-radius: 14px;
+  padding: 14px 20px;
+  font-size: 0.92rem;
+  color: var(--color-secondary);
+  text-align: center;
+}
+
+/* ── Mensajes ── */
+.coins-msg {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+.coins-msg--error   { background: rgba(150,0,24,0.08); color: var(--color-primary); }
+.coins-msg--success { background: rgba(30,130,76,0.1);  color: #1e824c; }
+
+/* ── Título de sección ── */
+.coins-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* ── Grid de paquetes ── */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.pkg-card {
+  position: relative;
+  background: #fff;
+  border: 2px solid rgba(60,0,0,0.1);
+  border-radius: 20px;
+  padding: 28px 20px 24px;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.pkg-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(150,0,24,0.1);
+}
+
+.pkg-card--popular {
+  border-color: var(--color-primary);
+  box-shadow: 0 8px 24px rgba(150,0,24,0.12);
+}
+
+.pkg-card--selected {
+  border-color: var(--color-primary);
+  background: rgba(150,0,24,0.04);
+  box-shadow: 0 0 0 3px rgba(150,0,24,0.15);
+}
+
+.pkg-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-primary);
+  color: #fff;
+  padding: 3px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pkg-coins {
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.pkg-coins-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-secondary);
+  font-weight: 700;
+}
+
+.pkg-label {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin-top: 8px;
+}
+
+.pkg-desc {
+  font-size: 0.8rem;
+  color: #7a4a4a;
+}
+
+.pkg-price {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--color-secondary);
+  margin-top: 10px;
+}
+
+/* ── Panel de pago ── */
+.payment-panel {
+  background: #fff;
+  border: 1px solid rgba(60,0,0,0.1);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.payment-panel__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  margin: 0;
+}
+
+/* ── Selector de método ── */
+.payment-methods {
+  display: flex;
+  gap: 12px;
+}
+
+.pay-method {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 2px solid rgba(60,0,0,0.1);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.pay-method input[type="radio"] {
+  accent-color: var(--color-primary);
+}
+
+.pay-method--active {
+  border-color: var(--color-primary);
+  background: rgba(150,0,24,0.04);
+}
+
+.pay-method__icon  { font-size: 1.3rem; }
+.pay-method__label { font-weight: 700; color: var(--color-secondary); font-size: 0.9rem; }
+
+/* ── Panel QR ── */
+.qr-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.qr-panel__hint {
+  color: #7a4a4a;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.qr-panel__img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 1px solid rgba(60,0,0,0.1);
+}
+
+.qr-panel__fallback {
+  width: 200px;
+  height: 200px;
+  border: 2px dashed rgba(60,0,0,0.2);
+  border-radius: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 2rem;
+  color: #9a6a6a;
+  text-align: center;
+  padding: 16px;
+}
+
+.qr-panel__fallback p { font-size: 0.8rem; margin: 0; }
+.qr-panel__fallback code { font-size: 0.75rem; background: #f5e8e8; padding: 2px 6px; border-radius: 4px; }
+
+.qr-panel__txid {
+  font-size: 0.85rem;
+  color: #7a4a4a;
+  margin: 0;
+}
+
+.qr-panel__actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 340px;
+}
+
+/* ── Tarjeta ── */
+.card-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.card-preview {
+  background: linear-gradient(135deg, var(--color-primary), #6b0015);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Courier New', monospace;
+}
+
+.card-preview__chip {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
+}
+
+.card-preview__number {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-align: center;
+}
+
+.card-preview__footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.card-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.card-field {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-field--full {
+  grid-column: 1 / -1;
+}
+
+.card-field label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.card-field input {
+  height: 44px;
+  border: 1px solid rgba(60,0,0,0.18);
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.card-field input:focus {
+  border-color: var(--color-primary);
+}
+
+/* ── Botones ── */
+.coins-btn {
+  background: var(--color-primary);
+  color: #fff;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 0.95rem;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+
+.coins-btn:hover:not(:disabled) { opacity: 0.88; }
+.coins-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.coins-btn--outline {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.coins-btn--outline:hover:not(:disabled) {
+  background: rgba(150,0,24,0.05);
+  opacity: 1;
+}
+
+.coins-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.coins-footer .coins-btn--outline {
+  width: auto;
+  padding: 12px 28px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .coins-hero {
+    flex-wrap: wrap;
+  }
+
+  .coins-hero__balance {
+    margin-left: 0;
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .payment-methods {
+    flex-direction: column;
+  }
+
+  .qr-panel__actions {
+    flex-direction: column;
+  }
+
+  .card-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .card-field--full {
+    grid-column: unset;
+  }
+}
