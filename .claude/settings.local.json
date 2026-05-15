@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gsutil version *)",
+      "Bash(firebase --version)"
+    ],
+    "additionalDirectories": [
+      "C:\\xampp\\htdocs\\wexi-api\\coins",
+      "C:\\xampp\\htdocs\\wexi-api"
+    ]
+  }
+}
